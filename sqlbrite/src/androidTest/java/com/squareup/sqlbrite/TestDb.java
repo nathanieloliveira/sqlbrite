@@ -18,11 +18,13 @@ package com.squareup.sqlbrite;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteOpenHelper;
 import android.support.annotation.NonNull;
+
 import java.util.Arrays;
 import java.util.Collection;
+
+import io.requery.android.database.sqlite.SQLiteDatabase;
+import io.requery.android.database.sqlite.SQLiteOpenHelper;
 import rx.functions.Func1;
 
 import static com.squareup.sqlbrite.TestDb.EmployeeTable.ID;

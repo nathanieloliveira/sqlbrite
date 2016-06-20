@@ -16,18 +16,22 @@
 package com.example.sqlbrite.todo.db;
 
 import android.app.Application;
-import android.database.sqlite.SQLiteOpenHelper;
+
 import com.squareup.sqlbrite.BriteDatabase;
 import com.squareup.sqlbrite.SqlBrite;
+
+import javax.inject.Singleton;
+
 import dagger.Module;
 import dagger.Provides;
-import javax.inject.Singleton;
+import io.requery.android.database.sqlite.SQLiteOpenHelper;
 import rx.schedulers.Schedulers;
 import timber.log.Timber;
 
 @Module
 public final class DbModule {
-  @Provides @Singleton SQLiteOpenHelper provideOpenHelper(Application application) {
+  @Provides @Singleton
+  SQLiteOpenHelper provideOpenHelper(Application application) {
     return new DbOpenHelper(application);
   }
 

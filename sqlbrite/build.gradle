@@ -1,15 +1,20 @@
 buildscript {
   dependencies {
     classpath rootProject.ext.androidPlugin
+    classpath rootProject.ext.androidMaven
   }
 }
 
 apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
 apply from: rootProject.file('gradle/android-findbugs.gradle')
+
+group = 'com.github.nathanieloliveira'
 
 dependencies {
   compile rootProject.ext.rxJava
   compile rootProject.ext.supportAnnotations
+  compile rootProject.ext.sqliteSupport
 
   androidTestCompile rootProject.ext.supportTestRunner
   androidTestCompile(rootProject.ext.truth) {
@@ -65,5 +70,3 @@ if (isCi()) {
     variant.connectedInstrumentTest.dependsOn startEmulator
   }
 }
-
-apply from: rootProject.file('gradle/gradle-mvn-push.gradle')

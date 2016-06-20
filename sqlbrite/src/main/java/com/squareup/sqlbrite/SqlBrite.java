@@ -17,12 +17,14 @@ package com.squareup.sqlbrite;
 
 import android.content.ContentResolver;
 import android.database.Cursor;
-import android.database.sqlite.SQLiteOpenHelper;
 import android.support.annotation.CheckResult;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.util.Log;
+
 import java.util.List;
+
+import io.requery.android.database.sqlite.SQLiteOpenHelper;
 import rx.Observable;
 import rx.Observable.Operator;
 import rx.Scheduler;

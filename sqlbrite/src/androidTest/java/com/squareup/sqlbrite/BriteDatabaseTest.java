@@ -18,22 +18,26 @@ package com.squareup.sqlbrite;
 import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.SQLException;
-import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
 import android.support.test.InstrumentationRegistry;
 import android.support.test.runner.AndroidJUnit4;
+
 import com.squareup.sqlbrite.BriteDatabase.Transaction;
 import com.squareup.sqlbrite.TestDb.Employee;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+
 import java.io.Closeable;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.CountDownLatch;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+
+import io.requery.android.database.sqlite.SQLiteDatabase;
 import rx.Observable;
 import rx.Subscription;
 import rx.functions.Action1;

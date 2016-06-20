@@ -17,14 +17,14 @@ package com.squareup.sqlbrite;
 
 import android.content.ContentValues;
 import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteOpenHelper;
 import android.database.sqlite.SQLiteTransactionListener;
 import android.support.annotation.CheckResult;
 import android.support.annotation.IntDef;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+
 import com.squareup.sqlbrite.SqlBrite.Query;
+
 import java.io.Closeable;
 import java.lang.annotation.Retention;
 import java.util.Arrays;
@@ -32,6 +32,9 @@ import java.util.Collections;
 import java.util.LinkedHashSet;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
+
+import io.requery.android.database.sqlite.SQLiteDatabase;
+import io.requery.android.database.sqlite.SQLiteOpenHelper;
 import rx.Observable;
 import rx.Scheduler;
 import rx.Subscriber;
